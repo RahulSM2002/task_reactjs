@@ -8,7 +8,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import { Close } from "@mui/icons-material";
 
 export const UrlUploadModal = ({ open, onClose, onAdd }: any) => {
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("https://");
   const [error, setError] = useState("");
 
   const validateUrl = (url: string) => {
@@ -19,7 +19,7 @@ export const UrlUploadModal = ({ open, onClose, onAdd }: any) => {
   const handleAdd = () => {
     if (validateUrl(url)) {
       onAdd(url);
-      setUrl("");
+      setUrl("https://");
       onClose();
     } else {
       setError("Please enter a valid URL");
