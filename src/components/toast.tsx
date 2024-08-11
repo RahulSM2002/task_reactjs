@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 
 export const showCustomToast = (
   message: string,
-  type?: "success" | "error" = "success"
+  type: "success" | "error" = "success"
 ) => {
   try {
     toast.dismiss();
