@@ -59,6 +59,7 @@ export const UrlUploadModal = ({ open, onClose, onAdd }: any) => {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           error={!!error}
+          autoFocus
           helperText={error}
           sx={{ mt: 2, mb: 2 }}
           InputProps={{
